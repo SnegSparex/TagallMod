@@ -18,7 +18,7 @@ class TagAllMod(loader.Module):
     strings = {"name":"TagAll"}
 
     def __init__(self):
-        self.config = loader.ModuleConfig("DEFAULT_MENTION_MESSAGE", 'KYS Token so... Ahh..', "Default message of mentions")
+        self.config = loader.ModuleConfig("DEFAULT_MENTION_MESSAGE", ' FBI Open the door! ', "Default message of mentions")
         self.name = self.strings["name"]
 
     async def client_ready(self, client, db):
@@ -45,7 +45,7 @@ class TagAllMod(loader.Module):
             loop.create_task(self.test(message, i, arg))
 
     async def until(self):
-        asyncio.sleep(60*5)
+        asyncio.sleep(100*5)
 
         try: loop.run_until_complete(self.until())
         except: pass
